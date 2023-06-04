@@ -90,9 +90,9 @@ class GameWindow(QWidget):
         layout.addWidget(self.grid_widget)
         self.grid_widget.setFocus()
         self.setLayout(layout)
-        # self.media_player = QMediaPlayer(self)
-        # self.media_player.setMedia(QMediaContent(QUrl.fromLocalFile("music.mp3")))
-        # self.media_player.play()
+        self.media_player = QMediaPlayer(self)
+        self.media_player.setMedia(QMediaContent(QUrl.fromLocalFile("music.mp3")))
+        self.media_player.play()
 
     def closeEvent(self, event):
         self.media_player.stop()
